@@ -38,7 +38,7 @@ function NewPassword() {
     const password = value.password;
     try {
       const passwordupdate = await axios.put(
-        `http://localhost:3000/updatepassword/${email}/${password}`
+        `https://day41-password-reset-api.onrender.com/updatepassword/${email}/${password}`
       );
       setprogress(false);
       navigate("/passwordupdated");
@@ -53,7 +53,7 @@ function NewPassword() {
         console.log("email", email);
         console.log("otp", otp);
         const verify_otp = await axios.get(
-          `http://localhost:3000/verifyotp/${email}/${otp}`
+          `https://day41-password-reset-api.onrender.com/verifyotp/${email}/${otp}`
         );
         if (verify_otp.data == "verified") {
           setinitprogress(false);

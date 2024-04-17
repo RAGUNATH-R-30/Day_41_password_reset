@@ -36,7 +36,7 @@ function Forgot_Password() {
       setprogress(true);
       const useremail = value.email;
       const userfound = await axios.get(
-        `http://localhost:3000/forgotpassword/${useremail}`
+        `https://day41-password-reset-api.onrender.com/forgotpassword/${useremail}`
       );
 
       if (userfound.data == "User Exists") {
@@ -45,7 +45,7 @@ function Forgot_Password() {
         setdisabled(true);
         try {
           const generate_otp = await axios.put(
-            `http://localhost:3000/generateotp/${useremail}`
+            `https://day41-password-reset-api.onrender.com/generateotp/${useremail}`
           );
           if (generate_otp.data == "otpsent") {
             setotp(true);
@@ -71,7 +71,7 @@ function Forgot_Password() {
     const otp = otpvalue.otp;
     try {
       const verify_otp = await axios.get(
-        `http://localhost:3000/verifyotp/${useremail}/${otp}`
+        `https://day41-password-reset-api.onrender.com/verifyotp/${useremail}/${otp}`
       );
       if (verify_otp.data == "verified") {
         setprogress(false);

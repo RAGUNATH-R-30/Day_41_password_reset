@@ -34,7 +34,7 @@ function Creatuser() {
     try {
       setprogress(true);
       const apiurl = await axios.post(
-        "http://localhost:3000/createuser",
+        "https://day41-password-reset-api.onrender.com/createuser",
         values
       );
       setprogress(false);
