@@ -1,8 +1,10 @@
-# React + Vite
+# Password Reset with Email OTP Verification Module (MERN Stack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This module provides a secure and user-friendly way to reset passwords using an OTP (One-Time Password) sent via email. It is designed to integrate seamlessly with your existing authentication system using the MERN (MongoDB, Express, React, Node.js) stack.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Email OTP Generation and Verification**: Sends a unique OTP to the user's registered email address for verification.
+- **Password Reset**: Allows users to reset their password upon successful OTP verification.
+- **Security**: Ensures secure handling of user data and OTPs, preventing unauthorized access.
+- **Customizable**: Easily customizable to fit your specific use case and branding requirements.
